@@ -4,8 +4,8 @@ if [[ -d "${rvm_path:-$HOME/.rvm}/environments" \
 else
   rvm --create  "ruby-1.8.7@modify"
 fi
-
-
-if [ `gem -v` != '1.8.6' ]; then
-  rvm @modify rubygems 1.8.6
-fi
+# 
+# 
+# if [ `gem -v` != '1.8.6' ]; then
+#   rvm @modify rubygems 1.8.6
+# fi
