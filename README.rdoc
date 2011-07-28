@@ -1,0 +1,3 @@
+= Modify
+
+Rails gem for modifying model's attributes before validation.
