@@ -12,9 +12,9 @@ class Person < ActiveRecord::Base
 end
 
 
-> p = Person.new :first_name => 'John', :last_name => 'Doe'
-> p.first_name #=> John
-> p.last_name  #=> Doe
-> p.valid?
-> p.first_name #=> JOHN
-> p.last_name  #=> DOE
+p = Person.new :first_name => 'John', :last_name => 'Doe'
+p.first_name #=> John
+p.last_name  #=> Doe
+p.valid?
+p.first_name #=> JOHN
+p.last_name  #=> DOE
