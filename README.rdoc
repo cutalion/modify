@@ -5,16 +5,21 @@ Rails gem for modifying model's attributes before validation.
 
 = Usage
 
-class Person < ActiveRecord::Base
-  modify :first_name, :last_name do |old_value|
-    old_value.upcase
+  class Person < ActiveRecord::Base
+    modify :first_name, :last_name do |old_value|
+      old_value.upcase
+    end
   end
-end
 
 
-p = Person.new :first_name => 'John', :last_name => 'Doe'
-p.first_name #=> John
-p.last_name  #=> Doe
-p.valid?
-p.first_name #=> JOHN
-p.last_name  #=> DOE
+  p = Person.new :first_name => 'John', :last_name => 'Doe'
+  p.first_name #=> John
+  p.last_name  #=> Doe
+  p.valid?
+  p.first_name #=> JOHN
+  p.last_name  #=> DOE
+
+
+= Installation
+
+= License
