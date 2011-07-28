@@ -5,7 +5,7 @@ module Modify
 
   module ClassMethods  
 
-    def modify(*fiels, &block)  
+    def modify(*fields, &block)  
       before_validation do |record|
         fields.each do |field|
           old_value = record.send(field)
