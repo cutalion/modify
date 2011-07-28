@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'  
 require 'echoe'  
   
-Echoe.new('modify', '0.1.1') do |p|  
+Echoe.new('modify', '0.1.2') do |p|  
   p.description     = "Modify model fields before validation"  
   p.url             = "http://github.com/cutalion/modify"  
   p.author          = "Alexander Glushkov"  
