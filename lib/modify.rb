@@ -6,10 +6,12 @@ module Modify
   module ClassMethods  
 
     def modify(*fields, &block)  
+      modificator = block_given? ? block : fields.pop
+
       before_validation do |record|
         fields.each do |field|
           old_value = record.send(field)
-          new_value = block.call old_value
+          new_value = modificator.call old_value
 
           record.send( "#{field}=", new_value )
         end  

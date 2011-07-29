@@ -1,18 +1,14 @@
 require 'spec_helper'
 
 describe Modify do
-  subject { TestModel.new }
 
+  context "modify with block parameter" do
+    subject { TestModelWithBlockParameter.new }
+    it_behaves_like "modify"
+  end
 
-  describe "modifies specified fields before validation" do
-    before { subject.field1 = 'aaa' }
-    before { subject.field2 = 'bbb' }
-    before { subject.field3 = 'ccc' }
-
-    before { subject.valid? }
-
-    its(:field1) { should == 'AAA' }
-    its(:field2) { should == 'BBB' }
-    its(:field3) { should == 'ccc' }
+  context "modify with lambda parameter" do
+    subject { TestModelWithLambdaParameter.new }
+    it_behaves_like "modify"
   end
 end
